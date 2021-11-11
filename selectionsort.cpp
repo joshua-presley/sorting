@@ -20,7 +20,7 @@ void SelectionSort(int unsorted[], size_t size){
 
 int main(void){
     int arr[5] = {5,4,3,2,1};
-    size_t size = GetArraySize(arr);
+    size_t size = sizeof(arr)/sizeof(arr[0]);
     SelectionSort(arr, size);
-    PrintArray(arr);
+    PrintArray(arr, size);
 }
