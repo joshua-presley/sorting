@@ -9,10 +9,8 @@ void Swap(int &i, int &j){
 }
 
 //Main part of the sorting algorithm.
-void BubbleSort(int unsorted[])
+void BubbleSort(int unsorted[], size_t length)
 {
-
-    int length = 3;
 
     for(int i=0; i<length - 1; i++){
         for(int j = 0; j < length - i - 1; j++){
@@ -20,7 +18,7 @@ void BubbleSort(int unsorted[])
             {
                 Swap(unsorted[j], unsorted[j+1]);
             }
-        } //1,3,2
+        } 
 
 
     }
@@ -30,8 +28,8 @@ int main() {
 
 
     int arr[3] = {3,2,1};
-
-    BubbleSort(arr);
+    size_t size = sizeof(arr)/sizeof(arr[0]);
+    BubbleSort(arr, size);
     
     for(int i = 0; i<3; i++){
         cout << arr[i] << ' ';
