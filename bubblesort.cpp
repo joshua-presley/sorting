@@ -1,5 +1,7 @@
 #include<iostream>
+#include<gl\GL.h>
 using namespace std;
+
 
 //use pointers to easily swap the elements of the array
 void Swap(int &i, int &j){
