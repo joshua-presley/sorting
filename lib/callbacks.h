@@ -29,10 +29,10 @@ void display(void)
             //
             float a = 0.5;
             float b = 0.3;
-            float x1 = i - a;
-            float x2 = i - b;
+            float x1 = (i - a)/3;
+            float x2 = (i - b)/3;
             float y1 = 0.0;
-            float y2 = 1.0;
+            float y2 = arr[i]/5;
 
             glVertex2f(x1, y1);
             glVertex2f(x2, y1);
