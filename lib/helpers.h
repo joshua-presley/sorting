@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void swap(int &i, int &j){
+void Swap(int &i, int &j){
     int tmp = i;
     i = j;
     j = tmp;
