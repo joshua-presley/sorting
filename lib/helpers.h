@@ -24,7 +24,7 @@ void DrawArray(int * arr, size_t size)
         glColor3f(x, y, z);
 
         float y1 = -1.0f;
-        float y2 = (2.0f / *(arr + i)) - 1;
+        float y2 = (*(arr + i) / 50) - 1;
         glBegin(GL_POLYGON);
 
 
@@ -55,7 +55,7 @@ int * GetArray(){
     static int arr[size];
 
     for(int i = 0; i < 10000; i++){
-        arr[i] = rand() + 1;
+        arr[i] = rand() % 100 + 1;
     }
 
     return arr;
