@@ -24,3 +24,7 @@ void display(void)
     /* Display bars that represent the array */
     BubbleSort(arr, 10000);
 }
+
+void idle(void){
+    glutPostRedisplay();
+}

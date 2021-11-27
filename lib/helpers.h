@@ -24,7 +24,7 @@ void DrawArray(int * arr, size_t size)
         glColor3f(x, y, z);
 
         float y1 = -1.0f;
-        float y2 = (*(arr + i) / 50) - 1;
+        float y2 = (*(arr + i) / 50.0f) - 1.0f;
         glBegin(GL_POLYGON);
 
 

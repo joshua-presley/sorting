@@ -8,7 +8,7 @@ int main(int argc, char** argv){
     glutCreateWindow("GLUT Test");
     glutKeyboardFunc(&keyboard);
     glutDisplayFunc(&display);
-    
+    glutIdleFunc(&idle);
 
     glutMainLoop();
 
