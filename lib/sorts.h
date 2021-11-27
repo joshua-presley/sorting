@@ -1,14 +1,14 @@
 #include<ctime>
 #include"helpers.h"
 
-void BubbleSort(int unsorted[], size_t length)
+void BubbleSort(int * unsorted, size_t length)
 {
     time_t start = std::time(nullptr);
     for(int i=0; i<length - 1; i++){
         for(int j = 0; j < length - i - 1; j++){
-            if (unsorted[j] > unsorted[j+1])
+            if (*(unsorted + j) > *(unsorted + j + 1))
             {
-                Swap(unsorted[j], unsorted[j+1]);
+                Swap(*(unsorted + j), *(unsorted + j + 1));
                 DrawArray(unsorted, length);
             }
         } 

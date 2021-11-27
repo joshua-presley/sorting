@@ -8,10 +8,8 @@ void Swap(int &i, int &j){
     j = tmp;
 }
 
-void DrawArray(int arr[], size_t size)
+void DrawArray(int * arr, size_t size)
 {
-
-    Sleep(250);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     float width = 2.0f/size;
@@ -26,7 +24,7 @@ void DrawArray(int arr[], size_t size)
         glColor3f(x, y, z);
 
         float y1 = -1.0f;
-        float y2 = (2.0f/arr[i]) - 1;
+        float y2 = (2.0f / *(arr + i)) - 1;
         glBegin(GL_POLYGON);
 
 
@@ -54,10 +52,11 @@ void PrintArray(int arr[], size_t size){
 int * GetArray(){
     srand(time(NULL));
     const int size = 10000;
-    int arr[size];
+    static int arr[size];
 
     for(int i = 0; i < 10000; i++){
         arr[i] = rand() + 1;
     }
-    
+
+    return arr;
 }
