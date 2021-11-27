@@ -50,3 +50,14 @@ void PrintArray(int arr[], size_t size){
         cout << arr[i] << ' ';
     }
 }
+
+int * GetArray(){
+    srand(time(NULL));
+    const int size = 10000;
+    int arr[size];
+
+    for(int i = 0; i < 10000; i++){
+        arr[i] = rand() + 1;
+    }
+    
+}
