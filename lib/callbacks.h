@@ -20,7 +20,7 @@ void keyboard(unsigned char key, int x, int y)
 void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    int arr[14] = {5, 1, 3, 4, 7, 10, 42, 53, 2, 15, 21, 24, 81, 7};
+    int arr[14] = {5, 1, 3, 4, 7, 10, 42, 53, 2, 15, 21, 24, 50, 7};
     /* Display bars that represent the array */
     BubbleSort(arr, 14);
 }
