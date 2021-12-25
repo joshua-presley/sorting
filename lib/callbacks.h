@@ -22,7 +22,7 @@ void display(void)
     glClear(GL_COLOR_BUFFER_BIT);
     int * arr = GetArray();
     /* Display bars that represent the array */
-    BubbleSort(arr, 10000);
+    BubbleSort(arr, 100);
 }
 
 void idle(void){
