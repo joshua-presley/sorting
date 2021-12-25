@@ -5,7 +5,7 @@
 int main(int argc, char** argv){
     glutInit(&argc, argv);
     glutInitWindowSize(500, 500);
-    glutCreateWindow("GLUT Test");
+    glutCreateWindow("Sorting");
     glutKeyboardFunc(&keyboard);
     glutDisplayFunc(&display);
     glutIdleFunc(&idle);
