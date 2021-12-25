@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<GL\glut.h>
 #include"sorts.h"
+#include<iostream>
 
 /* Keyboard callback function */
 void keyboard(unsigned char key, int x, int y)
@@ -23,6 +24,8 @@ void display(void)
     int * arr = GetArray();
     /* Display bars that represent the array */
     BubbleSort(arr, 100);
+    system("pause");
+    exit(EXIT_SUCCESS);
 }
 
 void idle(void){
