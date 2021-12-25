@@ -9,7 +9,7 @@ void BubbleSort(int * unsorted, size_t length)
             if (*(unsorted + j) > *(unsorted + j + 1))
             {
                 Swap(*(unsorted + j), *(unsorted + j + 1));
-                DrawArray(unsorted, length, j);
+                DrawArray(unsorted, length, j, "Bubblesort");
             }
         } 
     }

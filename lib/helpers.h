@@ -7,9 +7,20 @@ void Swap(int &i, int &j){
     i = j;
     j = tmp;
 }
-
-void DrawArray(int * arr, size_t size, int j)
+/*j represents the number being swapped so we can highlight it in red*/
+void DrawArray(int * arr, size_t size, int j, const unsigned char* functionName)
 {
+
+    int w = glutBitmapLength(GLUT_BITMAP_8_BY_13, functionName);
+    glRasterPos2f(0., 0.);
+    float x = 0.5f;
+    glRasterPos2f(x - (float) w / 2, 0.);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    int len = strlen((char*)functionName);
+    for (int i = 0; i < len; i++) {
+        glutBitmapCharacter(GLUT_BITMAP_8_BY_13, functionName[i]);
+    }
+
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     float width = 2.0f/size;
