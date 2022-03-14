@@ -1,23 +1,23 @@
-
+#include<ctime>
 #include"helpers.h"
 
-void BubbleSort(int unsorted[], size_t length)
+void BubbleSort(int * unsorted, size_t length)
 {
-
+    time_t start = std::time(nullptr);
     for(int i=0; i<length - 1; i++){
         for(int j = 0; j < length - i - 1; j++){
-            if (unsorted[j] > unsorted[j+1])
+            if (*(unsorted + j) > *(unsorted + j + 1))
             {
-                Swap(unsorted[j], unsorted[j+1]);
-                DrawArray(unsorted, length);
+                Swap(*(unsorted + j), *(unsorted + j + 1));
+                DrawArray(unsorted, length, j, (const unsigned char*)"Bubblesort");
             }
         } 
-
-
     }
+    time_t end = std::time(nullptr);
+    time_t diff = end - start;
 }
 
-void SelectionSort(int unsorted[], size_t size){
+void SelectionSort(int * unsorted, size_t size){
 
     for(int i = 0; i < size; i++){
 
@@ -26,7 +26,8 @@ void SelectionSort(int unsorted[], size_t size){
             if(unsorted[j] < unsorted[smallestIndex]){
                 smallestIndex = j;
             }
-            swap(unsorted[i], unsorted[smallestIndex]);
+            Swap(*(unsorted + i), *(unsorted + smallestIndex));
+            DrawArray(unsorted, size, j, (const unsigned char*)"Selection Sort");
         }
 
     }

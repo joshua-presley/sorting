@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<GL\glut.h>
 #include"sorts.h"
+#include<iostream>
 
 /* Keyboard callback function */
 void keyboard(unsigned char key, int x, int y)
@@ -20,7 +21,13 @@ void keyboard(unsigned char key, int x, int y)
 void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    int arr[14] = {5, 1, 3, 4, 7, 10, 42, 53, 2, 15, 21, 24, 50, 7};
+    int * arr = GetArray();
     /* Display bars that represent the array */
-    BubbleSort(arr, 14);
+    BubbleSort(arr, 100);
+    system("pause");
+    exit(EXIT_SUCCESS);
+}
+
+void idle(void){
+    glutPostRedisplay();
 }
