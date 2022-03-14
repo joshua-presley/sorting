@@ -26,9 +26,12 @@ void SelectionSort(int * unsorted, size_t size){
             if(unsorted[j] < unsorted[smallestIndex]){
                 smallestIndex = j;
             }
-            Swap(*(unsorted + i), *(unsorted + smallestIndex));
         }
 
+        if (smallestIndex != i)
+        {
+            Swap(*(unsorted + i), *(unsorted + smallestIndex));
+        }
         DrawArray(unsorted, size, smallestIndex, (const unsigned char*)"Selection Sort");
 
     }
