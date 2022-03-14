@@ -23,7 +23,7 @@ void display(void)
     glClear(GL_COLOR_BUFFER_BIT);
     int * arr = GetArray();
     /* Display bars that represent the array */
-    BubbleSort(arr, 100);
+    SelectionSort(arr, 100);
     system("pause");
     exit(EXIT_SUCCESS);
 }
