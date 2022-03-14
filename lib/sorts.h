@@ -17,7 +17,7 @@ void BubbleSort(int * unsorted, size_t length)
     time_t diff = end - start;
 }
 
-void SelectionSort(int unsorted[], size_t size){
+void SelectionSort(int * unsorted, size_t size){
 
     for(int i = 0; i < size; i++){
 
@@ -26,7 +26,8 @@ void SelectionSort(int unsorted[], size_t size){
             if(unsorted[j] < unsorted[smallestIndex]){
                 smallestIndex = j;
             }
-            swap(unsorted[i], unsorted[smallestIndex]);
+            Swap(*(unsorted + i), *(unsorted + smallestIndex));
+            DrawArray(unsorted, size, j, (const unsigned char*)"Bubblesort");
         }
 
     }
