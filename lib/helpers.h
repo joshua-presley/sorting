@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 #include<gl\glut.h>
+#include<gl\freeglut.h>
 
 void Swap(int &i, int &j){
     int tmp = i;
@@ -11,18 +12,17 @@ void Swap(int &i, int &j){
 void DrawArray(int * arr, size_t size, int j, const unsigned char* functionName)
 {
 
-    int w = glutBitmapLength(GLUT_BITMAP_8_BY_13, functionName);
-    glRasterPos2f(0., 0.);
-    float x = 0.5f;
-    glRasterPos2f(x - (float) w / 2, 0.);
-    glColor3f(0.0f, 1.0f, 0.0f);
-    int len = strlen((char*)functionName);
-    for (int i = 0; i < len; i++) {
-        glutBitmapCharacter(GLUT_BITMAP_8_BY_13, functionName[i]);
-    }
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    int w = glutBitmapLength(GLUT_BITMAP_8_BY_13, functionName);
+    glRasterPos2f(-0.75f, 0.8f);
+    glutBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, functionName);
+    float x = 0.5f;
+    glColor3f(0.0f, 1.0f, 0.0f);
+    
+
     float width = 2.0f/size;
     float x1 = -1.0f;
     float x2 = x1 + width;
