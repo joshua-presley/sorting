@@ -27,7 +27,7 @@ void SelectionSort(int * unsorted, size_t size){
                 smallestIndex = j;
             }
             Swap(*(unsorted + i), *(unsorted + smallestIndex));
-            DrawArray(unsorted, size, j, (const unsigned char*)"Bubblesort");
+            DrawArray(unsorted, size, j, (const unsigned char*)"Selection Sort");
         }
 
     }
