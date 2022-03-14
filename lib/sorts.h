@@ -22,13 +22,14 @@ void SelectionSort(int * unsorted, size_t size){
     for(int i = 0; i < size; i++){
 
         int smallestIndex = i;
-        for(int j = i+1; j < size; j++){
+        for(int j = i+1; j <= size; j++){
             if(unsorted[j] < unsorted[smallestIndex]){
                 smallestIndex = j;
             }
             Swap(*(unsorted + i), *(unsorted + smallestIndex));
-            DrawArray(unsorted, size, j, (const unsigned char*)"Selection Sort");
         }
+
+        DrawArray(unsorted, size, smallestIndex, (const unsigned char*)"Selection Sort");
 
     }
 }
